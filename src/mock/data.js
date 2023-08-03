@@ -1193,5 +1193,61 @@ export const dataTrip = [
         "boatType": "Barca a vela",
         "departureDate": "2023-09-03 08:30:00",
         "arrivalDate": "2023-09-05 18:00:00"
+    },
+    {
+        "id": "22a22054799fe8f24d455",
+        "code": "2145-05623",
+        "title": "doppio finta",
+        "departure": {
+            "portCode": "LMP",
+            "countryCode": "IT",
+            "Port": "Lampedusa"
+        },
+        "arrival": {
+            "portCode": "LMP",
+            "countryCode": "IT",
+            "Port": "Lampedusa"
+        },
+        "budget": {
+            "currencyCode": "€",
+            "value": 620,
+            "costType": "per cabina"
+        },
+        "itinerary": [],
+        "numberOfDays": 3,
+        "reservationsAvailable": 2,
+        "reservations": 3,
+        "reservationsType": "cabine",
+        "boatType": "Barca a vela",
+        "departureDate": "2023-09-03 08:30:00",
+        "arrivalDate": "2023-09-05 18:00:00"
+    },
+    {
+        "id": "22a22054799fe8f24d455",
+        "code": "2145-05623",
+        "title": "finta",
+        "departure": {
+            "portCode": "LMP",
+            "countryCode": "IT",
+            "Port": "Lampedusa"
+        },
+        "arrival": {
+            "portCode": "LMP",
+            "countryCode": "IT",
+            "Port": "Lampedusa"
+        },
+        "budget": {
+            "currencyCode": "€",
+            "value": 620,
+            "costType": "per cabina"
+        },
+        "itinerary": [],
+        "numberOfDays": 3,
+        "reservationsAvailable": 2,
+        "reservations": 3,
+        "reservationsType": "cabine",
+        "boatType": "Barca a vela",
+        "departureDate": "2023-09-03 08:30:00",
+        "arrivalDate": "2023-09-05 18:00:00"
     }
 ]

@@ -69,3 +69,13 @@ h1 {
   height: 35px;
   font-size: 18px;
 }
+
+.ranomd_cards_section h2 {
+  margin-left: 25px;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  color: #273049;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background: url('../src/assets/images/hero.jpeg') no-repeat center;
+
+}
+
+.hero_overlay {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.523);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  background: url('./assets/images/banner.jpeg') no-repeat center;
+
+}
+
+.banner_overlay {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.523);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f4f2ec;
+}
+.cards_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.price_boatTyoe {
+  display: flex;
+  align-items: center;
+}
+.footer {
+  background-color: #273049;
+  width: 100%;
+  height: 150px;
+}

@@ -1195,3 +1195,19 @@ export const dataTrip = [
         "arrivalDate": "2023-09-05 18:00:00"
     }
 ]
+
+export const shuffledData = dataTrip.slice().sort(() => 0.5 - Math.random());
+
+export const dataTripAddDepartureKey = dataTrip.map(element => Object.assign(element, {departurePort:element.departure.Port}));
+
+
+export const groupArray= dataTripAddDepartureKey.reduce((group, arr) => {
+    const { departurePort } = arr;
+    group[departurePort] = group[departurePort] ?? [];
+    group[departurePort].push(departurePort);
+    return group;
+},{});
+
+export const listDeparturePort = [];
+Object.entries(groupArray).map(([key]) => (  
+   listDeparturePort.push(key)))

@@ -79,3 +79,12 @@ h2{
   font-weight: bold;
   color: #273049;
 }
+.cards_list_group {
+  display: flex;flex-direction: column;
+}
+.name_port_group {
+  background-color: #00182b;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}

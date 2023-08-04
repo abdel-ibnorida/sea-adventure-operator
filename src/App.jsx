@@ -1,9 +1,12 @@
+import { useState } from 'react'
+import { dataTrip, shuffledData, listDeparturePort } from './mock/data'
 import logo from '../src/assets/images/logo.svg'
 import Card from './components/card'
-import { dataTrip } from './mock/data'
 import './App.css'
-import { useState } from 'react'
+
+
 function App() {
+  const [showAllCardSection, setShowAllCardSection] = useState(true);
   const [numCardsShowed, setNumCardsShowed] = useState(8);
   const onHandleShowMore = () => {
     if (dataTrip.length - numCardsShowed > 8) {
@@ -14,7 +17,10 @@ function App() {
       setNumCardsShowed(dataTrip.length)
     }
   }
-  const shuffledData = dataTrip.slice().sort(() => 0.5 - Math.random());
+  const onHandleSelect = (e) => {
+    setShowAllCardSection(!showAllCardSection);
+  }
+
   return (
     <>
       <div className='header'>
@@ -25,12 +31,36 @@ function App() {
           <h1>Lorem ipsum dolor, sit amet consectet.</h1>
         </div>
       </div>
-      <div className='cards_list'>
-        {dataTrip.slice(0, numCardsShowed).map(element => (
-          <Card data={element} />
-        ))}
-        {numCardsShowed >= dataTrip.length ? '' : <button className='show_more_btn' onClick={onHandleShowMore}>Mostra altri</button>}
+      <div>
+        <select onChange={onHandleSelect}>
+          <option value="true">Mostra tutti</option>
+          <option value="false">Mostra per porto di porto di partenza</option>
+        </select>
       </div>
+      {
+        showAllCardSection ?
+          <div className='cards_list'>
+            {dataTrip.slice(0, numCardsShowed).map(element => (
+              <Card data={element} />
+            ))}
+            {numCardsShowed >= dataTrip.length ? '' : <button className='show_more_btn' onClick={onHandleShowMore}>Mostra altri</button>}
+          </div>
+          :
+          <div className='cards_list_group'>
+            {
+              listDeparturePort.map((element => (
+                <>
+                  <div className='name_port_group'>{element}</div>
+                  <div className='cards_list'>
+                    {dataTrip.filter(trip => trip.departure.Port === element).map(el => <Card data={el} />)}
+                  </div>
+                </>
+
+              )))
+            }
+          </div>
+          
+      }
       <div className='banner'>
         <div className='banner_overlay'>
           <h1>+20 Destinazioni</h1>
